@@ -2,11 +2,11 @@
     "_comment": "variables for our sample app",
     
     "ubuntu_1404_ami": "ami-06116566",
-    "aws_vpc_id": "",
-    "aws_subnet_id": "",
+    "aws_vpc_id": "vpc-18fbbc7d",
+    "aws_subnet_id": "subnet-a60330c3",
     "aws_instance_type": "t2.micro",
     "aws_region": "us-west-1",
     "aws_ssh_username": "ubuntu",
-    "ami_prefix": "",
-    "name": ""
+    "ami_prefix": "user7",
+    "name": "UserExercise1"
 }

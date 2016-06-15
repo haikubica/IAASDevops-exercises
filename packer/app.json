@@ -14,5 +14,23 @@
         "Name" : "{{ user `name` }}"
       }
     }
+  ],
+
+  "provisioners": [
+    {
+      "type": "shell",
+      "inline": [
+         "sleep 10",
+         "sudo apt-get update",
+         "sudo apt-get install -y puppet"
+      ]
+    },
+    {
+      "type": "puppet-masterless",
+      "manifest_file": "../puppet/manifests/app.pp",
+      "module_paths": [
+        "../puppet/modules"
+      ]
+    }
   ]
 }
