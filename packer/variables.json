@@ -8,5 +8,5 @@
     "aws_region": "us-west-1",
     "aws_ssh_username": "ubuntu",
     "ami_prefix": "user7",
-    "name": "UserExercise1"
+    "name": "UserExercise2"
 }
