@@ -5,9 +5,9 @@ packages:
 
 write_files:
   - encoding: b64
-    content: ${HELLO_CGI}
+    content: ${CGI_SCRIPT}
     owner: root:root
-    path: /tmp/hello.cgi
+    path: /tmp/dailyyoda.cgi
     permissions: '0644'
   - encoding: b64
     content: ${NGINX_DEFAULT}
@@ -17,5 +17,5 @@ write_files:
 
 runcmd:
   - "mkdir /usr/share/nginx/cgi-bin"
-  - "mv /tmp/hello.cgi /usr/share/nginx/cgi-bin"
+  - "mv /tmp/dailyyoda.cgi /usr/share/nginx/cgi-bin"
   - "chmod -R 755 /usr/share/nginx/cgi-bin"
