@@ -8,7 +8,6 @@ resource "aws_instance" "webhost1" {
   key_name = "${var.key_name}"
   vpc_security_group_ids = ["${aws_security_group.default.id}"]
   associate_public_ip_address = true
-  user_data = "${template_file.cloud_init_nginx.rendered}"
   root_block_device {
     delete_on_termination = true
   }
@@ -24,7 +23,6 @@ resource "aws_instance" "webhost2" {
   key_name = "${var.key_name}"
   vpc_security_group_ids = ["${aws_security_group.default.id}"]
   associate_public_ip_address = true
-  user_data = "${template_file.cloud_init_nginx.rendered}"
   root_block_device {
     delete_on_termination = true
   }
